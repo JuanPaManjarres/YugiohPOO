@@ -192,3 +192,20 @@ class Jugador:
     return self.__puntos
   def setPuntos (self, puntos):
     self.__puntos = puntos
+
+
+
+#Clase Juego 
+class Juego():
+  def __init__(self, Lista_tableros, Jugador): #donde las lista tableros y jugadores tienen 2 elementos
+    self.__tableros = Lista_tableros
+    self.__jugador = Jugador
+    self.__turno = 0
+  def faseDeclararBatalla(self, carta_oponente):
+    if self.__turno < 2: 
+      print("No se puede declarar batalla en el primer turno")
+    else: #El turno es igual a 2 o mayor
+      if(carta_oponente.posicion == Posicion.VERTICAL): #si es verdad, entonces quiere decir que esta en ataque
+        if():    # se comparan los puntos de ataque de la carta de ataque al la carta atacada
+    
+      # else: #Si es falso, quiere decir que esta en defensa
