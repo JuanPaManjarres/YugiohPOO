@@ -19,3 +19,16 @@ class Jugador:
     return self.__mano
   def tomarCarta(self):
     return self.__deck.pop()
+  def agregarCartaTablero(self,carta):
+      if isinstance(carta,CartaMonstruo):
+        if None in self.__tablero.__cartasjugador[0]:
+          indice= self.__tablero.__cartasjugador[0].index(None)
+          self.__tablero.__cartasjugador[0][indice]= carta
+        else:
+          print("Espacio para carta tipo Monstruo lleno en el tablero")
+      elif isinstance(carta,CartaMagica) or isinstance(carta,CartaMonstruo):
+        if None in self.__tablero.__cartasjugador[1]:
+          indice= self.__tablero.__cartasjugador[1].index(None)
+          self.__tablero.__cartasjugador[1][indice]= carta
+        else:
+          print("Espacio para cartas tipo Magica o Trampa lleno en el tablero")
