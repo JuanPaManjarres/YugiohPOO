@@ -7,7 +7,7 @@ import random as rd
 
 class Deck:
   @staticmethod
-  def crearDeck(self):
+  def crearDeck():
     l_mons=[]
     l_mag=[]
     l_tram=[]
